@@ -1,0 +1,36 @@
+<!-- all template pages -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+</head>
+
+
+<body>
+    <div class="car-details">
+        <h1>
+            <%= car.name %>
+        </h1>
+        <% if(car.isLuxury){ %>
+            <p>This car is Luxurious!!!</p>
+            <% } else { %>
+                <p>This car is not Luxurious.</p>
+                <% } %>
+
+                    <a href="/cars/<%= car._id %>/edit">Edit <%=car.name%></a>
+ <div class="car-actions">
+
+     <form action="/cars/<%= car._id%>?_method=DELETE" method="POST">
+         
+         <button type="submit"> Delete <%=car.name%> </button>
+        </form>
+        <a class="cars-index-link" href="/cars">
+            <div class="index-link-text">Back to CARS</div>
+        </a>
+    </div>
+    </div>
+
+</body>

@@ -1,0 +1,29 @@
+ <!-- all template pages -->
+
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+   <link rel="stylesheet" href="/stylesheet/style.css" />
+ </head>
+
+
+<body>
+        <div class="index-header-div">
+     <h1>All CARS</h1>
+ <a class="add-car" href="/cars/new">Add car</a>
+   </div>
+<ul>
+     <% car.forEach((car)=> { %>
+     <li>
+       <a class="car-cards" href="/cars/<%=car._id%>">
+         <%= car.name %>
+       </a>
+     </li>
+     <% }) %>
+   </ul>
+   <a class="cars-index-link" href="/">
+            <div class="index-link-text">Back to Home Page</div>
+        </a>
+</body>

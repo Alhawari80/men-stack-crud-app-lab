@@ -14,13 +14,13 @@
      <h1>All CARS</h1>
  <a class="add-car" href="/cars/new">Add car</a>
    </div>
-<ul>
+  
+<ul class="car-list">
      <% car.forEach((car)=> { %>
-     <li>
-       <a class="car-cards" href="/cars/<%=car._id%>">
-         <%= car.name %>
+     
+       <a  href="/cars/<%=car._id%>">
+        <li> <%= car.name %></li>
        </a>
-     </li>
      <% }) %>
    </ul>
    <a class="cars-index-link" href="/">

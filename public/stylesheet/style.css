@@ -139,7 +139,7 @@
    border-radius: 15px;
    display: flex;
    justify-content: center;
-   align-items: center;
+   align-items: space-between;
    color: white;
    font-weight: bold;
    text-align: center;
@@ -179,6 +179,7 @@
  .cars-cards {
    display: flex;
    flex-direction: column;
+   align-content: space-between;
    text-decoration: none;
    color: black;
    width: 40px;
@@ -229,4 +230,8 @@
  img {
    height: 100%;
    margin: 20px 0 0 0;
+ }
+
+ .car-list{
+  flex-direction: column;
  }
